@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="car in cars">{{car}}</li>
+    </ul>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Occupation</th>
+            <th>Age</th>
+        </tr>
+        <tr v-for="person in persons">
+            <td>{{person.name}}</td>
+            <td>{{person.occupation}}</td>
+            <td>{{person.age}}</td>
+        </tr>
+    </table>
+</div>
+
+
+
+<script src="../src/vue.js"></script>
+<script>
+     app = new Vue({
+        el:'#app',
+        data:{
+            cars:['bmw','ferarry','audi','lamberginni','porse','tata','toyota'],
+            persons:[
+                {name:'Anik',occupation:'Freelancer',age:25},
+                {name:'Muhit',occupation:'Student',age:24},
+                {name:'Rana',occupation:'Foreinar',age:25},
+                {name:'Farhad',occupation:'Job Holder',age:26}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

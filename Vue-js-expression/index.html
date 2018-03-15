@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>{{message}}</h1>
+    <hr>
+
+    <h2>JS expressions work fine in mustache</h2>
+    <p>Add 3+4 = {{3+4}}</p>
+    <p>Add 3-4 = {{3-4}}</p>
+
+    <p>Work conditional (In our code error:false):<b> {{error?'Yes,Has error':'There is no error'}}</b></p>
+
+</div>
+
+
+
+<script src="../src/vue.js"></script>
+<script>
+
+     app = new Vue({
+        el:'#app',
+        data:{
+            message:'Welcome to VueJs',
+            error:false
+        }
+    })
+</script>
+</body>
+</html>

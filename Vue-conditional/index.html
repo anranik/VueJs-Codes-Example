@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <!--this h1 element will show because "show" is now true-->
+    <h1 v-if="show">{{welcome}}</h1>
+
+
+    <!--this h1 element will remain hidden because "hidden" is now false-->
+    <h1 v-if="hidden">Hidden, {{welcome}}</h1>
+</div>
+
+
+
+<script src="../src/vue.js"></script>
+<script>
+     app = new Vue({
+        el:'#app',
+        data:{
+            welcome: 'Hello to VueJs world',
+            show : true,
+            hidden: false
+        }
+    })
+</script>
+</body>
+</html>

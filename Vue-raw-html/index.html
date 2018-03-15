@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <h1 v-once>{{message}}</h1>
+    <h2>Adding Raw HTML on Dom</h2>
+
+    <p>This is without raw html</p>
+    <div>{{html}}</div>
+    <hr>
+    <p>This is with raw html</p>
+    <div v-html="html"></div>
+
+
+</div>
+
+
+
+<script src="../src/vue.js"></script>
+<script>
+
+     app = new Vue({
+        el:'#app',
+        data:{
+            message:'Welcome to VueJs',
+            html:'<span style="color:red"> Raw html</span>'
+        }
+    })
+</script>
+</body>
+</html>
